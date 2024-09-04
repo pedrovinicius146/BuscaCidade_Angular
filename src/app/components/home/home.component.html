@@ -1,0 +1,13 @@
+<section>
+    <form>
+      <input type="text" placeholder="Filtrar por cidade" [(ngModel)]="cidadeBusca" name="cidade">
+      <p *ngIf="resultadoBusca">{{ resultadoBusca }}</p>
+      <button class="primary" (click)="buscarCidade()">Procurar</button>
+    </form>
+  </section>
+  
+ <app-housing-location></app-housing-location>
+ <div *ngIf="resultadoBusca">
+  <img [src]="housingLocation.foto" alt="Foto da Localização" style="width: 100%; max-width: 300px;
+   border-radius: 8px;">
+</div>
